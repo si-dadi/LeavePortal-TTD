@@ -31,8 +31,8 @@ export default function Form() {
           className="px-4 max-w-3xl mx-auto space-y-6"
         >
           <h3>Welcome, <strong>{localStorage.getItem("displayName")}</strong></h3>
-          <h3>{email}</h3>
-          <h3>{id_email}</h3>
+          <h3>{"Last 4 digits: "+email.slice(6,10)}</h3>
+          <h3>{"Batch: "+email.slice(2,6)}</h3>
           <br />
           <div class="flex justify-center">
             <div class="mb-3 xl:w-96">
@@ -108,7 +108,7 @@ export default function Form() {
             </select>
           </div>
 
-          <div>
+          {/* <div>
             <select
               name="batch"
               className="inline-flex justify-center text-center m-2 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
@@ -123,7 +123,7 @@ export default function Form() {
               <option>2018</option>
             </select>
             <br />
-          </div>
+          </div> */}
           <div className="flex flex-row justify-center align-middle text-center">
             <button class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">
               Submit for Approval
